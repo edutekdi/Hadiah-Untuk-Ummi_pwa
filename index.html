@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Halaman Bacaan Interaktif</title>
+ <title>Halaman Bacaan Interaktif</title
+
+<style>
+/* Sekat pengguna pilih atau salin teks */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
+
   <style>
     body {
       font-family: 'Century Gothic';
@@ -11,27 +22,6 @@
       padding: 20px;
       background-color: #f8f8f8;
     }
-
-    <script>
-// Sekat klik kanan
-document.addEventListener('contextmenu', e => e.preventDefault());
-
-// Sekat highlight teks
-document.addEventListener('selectstart', e => e.preventDefault());
-document.addEventListener('mousedown', e => e.preventDefault());
-
-// Sekat kekunci tertentu (F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S)
-document.onkeydown = function(e) {
-  if (
-    e.keyCode === 123 || // F12
-    (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
-    (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
-    (e.ctrlKey && e.keyCode === 83) // Ctrl+S
-  ) {
-    return false;
-  }
-};
-</script>
 
 <link rel="manifest" href="manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,6 +57,28 @@ document.onkeydown = function(e) {
       gap: 20px;
       margin-bottom: 20px;
     }
+
+    <script>
+// Sekat klik kanan
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Sekat highlight teks
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('mousedown', e => e.preventDefault());
+
+// Sekat kekunci Ctrl+U, Ctrl+S, F12, Ctrl+Shift+I
+document.onkeydown = function(e) {
+  if (
+    e.keyCode === 123 || // F12
+    (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
+    (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
+    (e.ctrlKey && e.keyCode === 83)    // Ctrl+S
+  ) {
+    e.preventDefault();
+    return false;
+  }
+};
+</script>
 
     .kotak-teks, .kotak-ilustrasi {
       flex: 1;
@@ -147,15 +159,6 @@ document.onkeydown = function(e) {
       color: gold;
       margin-top: 10px;
     }
-
-    <style>
-body {
-  -webkit-user-select: none; /* Chrome, Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  user-select: none;         /* Standard */
-}
-</style>
 
   </style>
 </head>
