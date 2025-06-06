@@ -1,7 +1,6 @@
-const cacheName = ''Hadiah Untuk Ummi-pw';
+const cacheName = 'Hadiah Untuk Ummi-pw';
 
 const assetsToCache = [
-  './',
   './index.html',
   './manifest.json',
   
@@ -28,16 +27,15 @@ const assetsToCache = [
   './images/halaman16.png',
   './images/coverbelakang.png',
   './images/icon192.png',
-  './images/icon512.png'
+  './images/icon512.png',
 
   // Audio
-  ''./audio/audio1.mp3',
+  './audio/audio1.mp3',
   './audio/audio2.mp3',
   './audio/audio4.mp3',
   './audio/audio5.mp3',
   './audio/audio6.mp3',
   './audio/audio7.mp3',
-  './audio/audio8.mp3',
   './audio/audio8.mp3',
   './audio/audio9.mp3',
   './audio/audio10.mp3',
