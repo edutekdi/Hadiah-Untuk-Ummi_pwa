@@ -14,7 +14,6 @@ const assetsToCache = [
   './images/halaman3.png',
   './images/halaman4.png',
   './images/halaman5.png',
-  './images/halaman6.png',
   './images/halaman7.png',
   './images/halaman8.png',
   './images/halaman9.png',
